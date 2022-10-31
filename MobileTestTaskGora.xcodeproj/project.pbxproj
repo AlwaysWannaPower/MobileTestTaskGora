@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CB2910835E00B74480 /* AppDelegate.swift */; };
 		0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CD2910835E00B74480 /* SceneDelegate.swift */; };
-		0960B9D02910835E00B74480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CF2910835E00B74480 /* ViewController.swift */; };
-		0960B9D32910835E00B74480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D12910835E00B74480 /* Main.storyboard */; };
+		0960B9D02910835E00B74480 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CF2910835E00B74480 /* MainViewController.swift */; };
 		0960B9D52910836000B74480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D42910836000B74480 /* Assets.xcassets */; };
 		0960B9D82910836000B74480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D62910836000B74480 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		0960B9C82910835E00B74480 /* MobileTestTaskGora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTestTaskGora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0960B9CB2910835E00B74480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0960B9CD2910835E00B74480 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0960B9CF2910835E00B74480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0960B9D22910835E00B74480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0960B9CF2910835E00B74480 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0960B9D42910836000B74480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0960B9D72910836000B74480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0960B9D92910836000B74480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +56,7 @@
 			children = (
 				0960B9CB2910835E00B74480 /* AppDelegate.swift */,
 				0960B9CD2910835E00B74480 /* SceneDelegate.swift */,
-				0960B9CF2910835E00B74480 /* ViewController.swift */,
-				0960B9D12910835E00B74480 /* Main.storyboard */,
+				0960B9CF2910835E00B74480 /* MainViewController.swift */,
 				0960B9D42910836000B74480 /* Assets.xcassets */,
 				0960B9D62910836000B74480 /* LaunchScreen.storyboard */,
 				0960B9D92910836000B74480 /* Info.plist */,
@@ -74,6 +71,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0960B9DC2910836000B74480 /* Build configuration list for PBXNativeTarget "MobileTestTaskGora" */;
 			buildPhases = (
+				0960B9DF2910837500B74480 /* ShellScript */,
 				0960B9C42910835E00B74480 /* Sources */,
 				0960B9C52910835E00B74480 /* Frameworks */,
 				0960B9C62910835E00B74480 /* Resources */,
@@ -127,18 +125,37 @@
 			files = (
 				0960B9D82910836000B74480 /* LaunchScreen.storyboard in Resources */,
 				0960B9D52910836000B74480 /* Assets.xcassets in Resources */,
-				0960B9D32910835E00B74480 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0960B9DF2910837500B74480 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0960B9C42910835E00B74480 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0960B9D02910835E00B74480 /* ViewController.swift in Sources */,
+				0960B9D02910835E00B74480 /* MainViewController.swift in Sources */,
 				0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */,
 				0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +164,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0960B9D12910835E00B74480 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0960B9D22910835E00B74480 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0960B9D62910836000B74480 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +301,6 @@
 				INFOPLIST_FILE = MobileTestTaskGora/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +328,6 @@
 				INFOPLIST_FILE = MobileTestTaskGora/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
