@@ -54,8 +54,6 @@ extension NameListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    
-
 }
 
 extension NameListViewController {
