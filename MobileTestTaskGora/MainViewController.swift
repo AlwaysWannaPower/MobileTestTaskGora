@@ -8,26 +8,26 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViews()
         setConstraints()
     }
-
+    
     func setupViews() {
         view.backgroundColor = . green
-
+        
     }
-
+    
 }
 
 extension MainViewController {
     func setConstraints() {
         NSLayoutConstraint.activate([
-
+            
         ])
     }
-
+    
 }
