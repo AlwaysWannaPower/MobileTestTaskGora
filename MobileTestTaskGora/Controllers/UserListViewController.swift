@@ -7,8 +7,9 @@
 
 import UIKit
 
-class UserListViewController: UIViewController {
-
+class UserListViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
