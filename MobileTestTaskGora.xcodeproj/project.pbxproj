@@ -9,33 +9,73 @@
 /* Begin PBXBuildFile section */
 		0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CB2910835E00B74480 /* AppDelegate.swift */; };
 		0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CD2910835E00B74480 /* SceneDelegate.swift */; };
-		0960B9D02910835E00B74480 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CF2910835E00B74480 /* MainViewController.swift */; };
+		0960B9D02910835E00B74480 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CF2910835E00B74480 /* UserListViewController.swift */; };
 		0960B9D52910836000B74480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D42910836000B74480 /* Assets.xcassets */; };
 		0960B9D82910836000B74480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D62910836000B74480 /* LaunchScreen.storyboard */; };
-		0960B9EC291141A700B74480 /* NameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9EB291141A700B74480 /* NameModel.swift */; };
-		0960B9EE2911430800B74480 /* NameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9ED2911430800B74480 /* NameListViewController.swift */; };
-		0960B9F02911463000B74480 /* UIViewConstraintExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9EF2911463000B74480 /* UIViewConstraintExt.swift */; };
-		0960B9F229115E0200B74480 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9F129115E0200B74480 /* NameTableViewCell.swift */; };
-		0960B9F42911830C00B74480 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9F32911830C00B74480 /* TestViewController.swift */; };
+		F6C9752D2911283D0049FF39 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9752C2911283D0049FF39 /* UserListView.swift */; };
+		F6C9752F29112EDC0049FF39 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9752E29112EDC0049FF39 /* UserInfo.swift */; };
+		F6C97531291130380049FF39 /* UserListProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C97530291130380049FF39 /* UserListProviderInterface.swift */; };
+		F6C97533291130890049FF39 /* UserListMockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C97532291130890049FF39 /* UserListMockProvider.swift */; };
+		F6C97536291131D10049FF39 /* RandomStringProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C97535291131D10049FF39 /* RandomStringProvider.swift */; };
+		F6C975382911323F0049FF39 /* RandomIntProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975372911323F0049FF39 /* RandomIntProvider.swift */; };
+		F6C975402911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9753F2911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift */; };
+		F6C975472911A8030049FF39 /* MockObjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975462911A8030049FF39 /* MockObjectsTests.swift */; };
+		F6C9754A2911AFED0049FF39 /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975492911AFED0049FF39 /* AppAlert.swift */; };
+		F6C9754C2911B00D0049FF39 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9754B2911B00D0049FF39 /* AppConstants.swift */; };
+		F6C9754F2911B0620049FF39 /* CoordinatorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9754E2911B0620049FF39 /* CoordinatorTypes.swift */; };
+		F6C975512911B1FA0049FF39 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975502911B1FA0049FF39 /* AppCoordinator.swift */; };
+		F6C975532911B2E00049FF39 /* UserInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975522911B2E00049FF39 /* UserInfoCoordinator.swift */; };
+		F6C975552911B3080049FF39 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975542911B3080049FF39 /* ViewControllersFactory.swift */; };
+		F6C975572911B3EB0049FF39 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */; };
+		F6C975592911B6C10049FF39 /* UserDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6C975412911A5A30049FF39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0960B9C02910835E00B74480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0960B9C72910835E00B74480;
+			remoteInfo = MobileTestTaskGora;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0960B9C82910835E00B74480 /* MobileTestTaskGora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTestTaskGora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0960B9CB2910835E00B74480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0960B9CD2910835E00B74480 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0960B9CF2910835E00B74480 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0960B9CF2910835E00B74480 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		0960B9D42910836000B74480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0960B9D72910836000B74480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0960B9D92910836000B74480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0960B9EB291141A700B74480 /* NameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameModel.swift; sourceTree = "<group>"; };
-		0960B9ED2911430800B74480 /* NameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListViewController.swift; sourceTree = "<group>"; };
-		0960B9EF2911463000B74480 /* UIViewConstraintExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintExt.swift; sourceTree = "<group>"; };
-		0960B9F129115E0200B74480 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
-		0960B9F32911830C00B74480 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		F6C9752C2911283D0049FF39 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		F6C9752E29112EDC0049FF39 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		F6C97530291130380049FF39 /* UserListProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListProviderInterface.swift; sourceTree = "<group>"; };
+		F6C97532291130890049FF39 /* UserListMockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListMockProvider.swift; sourceTree = "<group>"; };
+		F6C97535291131D10049FF39 /* RandomStringProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringProvider.swift; sourceTree = "<group>"; };
+		F6C975372911323F0049FF39 /* RandomIntProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomIntProvider.swift; sourceTree = "<group>"; };
+		F6C9753D2911A5A30049FF39 /* MobileTestTaskGoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTestTaskGoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C9753F2911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTestTaskGoraUtilitiesTests.swift; sourceTree = "<group>"; };
+		F6C975462911A8030049FF39 /* MockObjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjectsTests.swift; sourceTree = "<group>"; };
+		F6C975492911AFED0049FF39 /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
+		F6C9754B2911B00D0049FF39 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F6C9754E2911B0620049FF39 /* CoordinatorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTypes.swift; sourceTree = "<group>"; };
+		F6C975502911B1FA0049FF39 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F6C975522911B2E00049FF39 /* UserInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCoordinator.swift; sourceTree = "<group>"; };
+		F6C975542911B3080049FF39 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0960B9C52910835E00B74480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C9753A2911A5A30049FF39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0960B9CA2910835E00B74480 /* MobileTestTaskGora */,
+				F6C9753E2911A5A30049FF39 /* MobileTestTaskGoraTests */,
 				0960B9C92910835E00B74480 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				0960B9C82910835E00B74480 /* MobileTestTaskGora.app */,
+				F6C9753D2911A5A30049FF39 /* MobileTestTaskGoraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,19 +106,85 @@
 		0960B9CA2910835E00B74480 /* MobileTestTaskGora */ = {
 			isa = PBXGroup;
 			children = (
+				F6C975482911AFDC0049FF39 /* Common */,
+				F6C97534291131B60049FF39 /* Utilities */,
+				F6C9752B291127A60049FF39 /* Model */,
+				F6C9752A291127970049FF39 /* Views */,
+				F6C975292911278F0049FF39 /* Controllers */,
 				0960B9CB2910835E00B74480 /* AppDelegate.swift */,
 				0960B9CD2910835E00B74480 /* SceneDelegate.swift */,
-				0960B9CF2910835E00B74480 /* MainViewController.swift */,
 				0960B9D42910836000B74480 /* Assets.xcassets */,
 				0960B9D62910836000B74480 /* LaunchScreen.storyboard */,
 				0960B9D92910836000B74480 /* Info.plist */,
-				0960B9EB291141A700B74480 /* NameModel.swift */,
-				0960B9ED2911430800B74480 /* NameListViewController.swift */,
-				0960B9EF2911463000B74480 /* UIViewConstraintExt.swift */,
-				0960B9F129115E0200B74480 /* NameTableViewCell.swift */,
-				0960B9F32911830C00B74480 /* TestViewController.swift */,
 			);
 			path = MobileTestTaskGora;
+			sourceTree = "<group>";
+		};
+		F6C975292911278F0049FF39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6C9754D2911B0430049FF39 /* Coordinator */,
+				0960B9CF2910835E00B74480 /* UserListViewController.swift */,
+				F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F6C9752A291127970049FF39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6C9752C2911283D0049FF39 /* UserListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6C9752B291127A60049FF39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6C9752E29112EDC0049FF39 /* UserInfo.swift */,
+				F6C97530291130380049FF39 /* UserListProviderInterface.swift */,
+				F6C97532291130890049FF39 /* UserListMockProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6C97534291131B60049FF39 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F6C97535291131D10049FF39 /* RandomStringProvider.swift */,
+				F6C975372911323F0049FF39 /* RandomIntProvider.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F6C9753E2911A5A30049FF39 /* MobileTestTaskGoraTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6C9753F2911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift */,
+				F6C975462911A8030049FF39 /* MockObjectsTests.swift */,
+			);
+			path = MobileTestTaskGoraTests;
+			sourceTree = "<group>";
+		};
+		F6C975482911AFDC0049FF39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F6C975492911AFED0049FF39 /* AppAlert.swift */,
+				F6C9754B2911B00D0049FF39 /* AppConstants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F6C9754D2911B0430049FF39 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F6C9754E2911B0620049FF39 /* CoordinatorTypes.swift */,
+				F6C975502911B1FA0049FF39 /* AppCoordinator.swift */,
+				F6C975522911B2E00049FF39 /* UserInfoCoordinator.swift */,
+				F6C975542911B3080049FF39 /* ViewControllersFactory.swift */,
+				F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +208,24 @@
 			productReference = 0960B9C82910835E00B74480 /* MobileTestTaskGora.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F6C9753C2911A5A30049FF39 /* MobileTestTaskGoraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C975432911A5A30049FF39 /* Build configuration list for PBXNativeTarget "MobileTestTaskGoraTests" */;
+			buildPhases = (
+				F6C975392911A5A30049FF39 /* Sources */,
+				F6C9753A2911A5A30049FF39 /* Frameworks */,
+				F6C9753B2911A5A30049FF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6C975422911A5A30049FF39 /* PBXTargetDependency */,
+			);
+			name = MobileTestTaskGoraTests;
+			productName = MobileTestTaskGoraTests;
+			productReference = F6C9753D2911A5A30049FF39 /* MobileTestTaskGoraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -112,6 +238,10 @@
 				TargetAttributes = {
 					0960B9C72910835E00B74480 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					F6C9753C2911A5A30049FF39 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 0960B9C72910835E00B74480;
 					};
 				};
 			};
@@ -129,6 +259,7 @@
 			projectRoot = "";
 			targets = (
 				0960B9C72910835E00B74480 /* MobileTestTaskGora */,
+				F6C9753C2911A5A30049FF39 /* MobileTestTaskGoraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +271,13 @@
 			files = (
 				0960B9D82910836000B74480 /* LaunchScreen.storyboard in Resources */,
 				0960B9D52910836000B74480 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C9753B2911A5A30049FF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,18 +308,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0960B9EC291141A700B74480 /* NameModel.swift in Sources */,
-				0960B9EE2911430800B74480 /* NameListViewController.swift in Sources */,
-				0960B9F42911830C00B74480 /* TestViewController.swift in Sources */,
-				0960B9F229115E0200B74480 /* NameTableViewCell.swift in Sources */,
-				0960B9D02910835E00B74480 /* MainViewController.swift in Sources */,
-				0960B9F02911463000B74480 /* UIViewConstraintExt.swift in Sources */,
+				F6C97536291131D10049FF39 /* RandomStringProvider.swift in Sources */,
+				0960B9D02910835E00B74480 /* UserListViewController.swift in Sources */,
+				F6C975512911B1FA0049FF39 /* AppCoordinator.swift in Sources */,
 				0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */,
+				F6C9754C2911B00D0049FF39 /* AppConstants.swift in Sources */,
 				0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */,
+				F6C9752F29112EDC0049FF39 /* UserInfo.swift in Sources */,
+				F6C97533291130890049FF39 /* UserListMockProvider.swift in Sources */,
+				F6C975382911323F0049FF39 /* RandomIntProvider.swift in Sources */,
+				F6C9752D2911283D0049FF39 /* UserListView.swift in Sources */,
+				F6C9754A2911AFED0049FF39 /* AppAlert.swift in Sources */,
+				F6C975552911B3080049FF39 /* ViewControllersFactory.swift in Sources */,
+				F6C975532911B2E00049FF39 /* UserInfoCoordinator.swift in Sources */,
+				F6C9754F2911B0620049FF39 /* CoordinatorTypes.swift in Sources */,
+				F6C975572911B3EB0049FF39 /* UserDetailsViewController.swift in Sources */,
+				F6C97531291130380049FF39 /* UserListProviderInterface.swift in Sources */,
+				F6C975592911B6C10049FF39 /* UserDetailsCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C975392911A5A30049FF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C975472911A8030049FF39 /* MockObjectsTests.swift in Sources */,
+				F6C975402911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6C975422911A5A30049FF39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0960B9C72910835E00B74480 /* MobileTestTaskGora */;
+			targetProxy = F6C975412911A5A30049FF39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0960B9D62910836000B74480 /* LaunchScreen.storyboard */ = {
@@ -363,6 +527,42 @@
 			};
 			name = Release;
 		};
+		F6C975442911A5A30049FF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43BA3A7UV4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.dmitry.nikishov.MobileTestTaskGoraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTestTaskGora.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileTestTaskGora";
+			};
+			name = Debug;
+		};
+		F6C975452911A5A30049FF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43BA3A7UV4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.dmitry.nikishov.MobileTestTaskGoraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileTestTaskGora.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileTestTaskGora";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -380,6 +580,15 @@
 			buildConfigurations = (
 				0960B9DD2910836000B74480 /* Debug */,
 				0960B9DE2910836000B74480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C975432911A5A30049FF39 /* Build configuration list for PBXNativeTarget "MobileTestTaskGoraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C975442911A5A30049FF39 /* Debug */,
+				F6C975452911A5A30049FF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
