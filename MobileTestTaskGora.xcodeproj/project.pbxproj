@@ -12,6 +12,11 @@
 		0960B9D02910835E00B74480 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CF2910835E00B74480 /* MainViewController.swift */; };
 		0960B9D52910836000B74480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D42910836000B74480 /* Assets.xcassets */; };
 		0960B9D82910836000B74480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D62910836000B74480 /* LaunchScreen.storyboard */; };
+		0960B9EC291141A700B74480 /* NameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9EB291141A700B74480 /* NameModel.swift */; };
+		0960B9EE2911430800B74480 /* NameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9ED2911430800B74480 /* NameListViewController.swift */; };
+		0960B9F02911463000B74480 /* UIViewConstraintExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9EF2911463000B74480 /* UIViewConstraintExt.swift */; };
+		0960B9F229115E0200B74480 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9F129115E0200B74480 /* NameTableViewCell.swift */; };
+		0960B9F42911830C00B74480 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9F32911830C00B74480 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		0960B9D42910836000B74480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0960B9D72910836000B74480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0960B9D92910836000B74480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0960B9EB291141A700B74480 /* NameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameModel.swift; sourceTree = "<group>"; };
+		0960B9ED2911430800B74480 /* NameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListViewController.swift; sourceTree = "<group>"; };
+		0960B9EF2911463000B74480 /* UIViewConstraintExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintExt.swift; sourceTree = "<group>"; };
+		0960B9F129115E0200B74480 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		0960B9F32911830C00B74480 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				0960B9D42910836000B74480 /* Assets.xcassets */,
 				0960B9D62910836000B74480 /* LaunchScreen.storyboard */,
 				0960B9D92910836000B74480 /* Info.plist */,
+				0960B9EB291141A700B74480 /* NameModel.swift */,
+				0960B9ED2911430800B74480 /* NameListViewController.swift */,
+				0960B9EF2911463000B74480 /* UIViewConstraintExt.swift */,
+				0960B9F129115E0200B74480 /* NameTableViewCell.swift */,
+				0960B9F32911830C00B74480 /* TestViewController.swift */,
 			);
 			path = MobileTestTaskGora;
 			sourceTree = "<group>";
@@ -155,7 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0960B9EC291141A700B74480 /* NameModel.swift in Sources */,
+				0960B9EE2911430800B74480 /* NameListViewController.swift in Sources */,
+				0960B9F42911830C00B74480 /* TestViewController.swift in Sources */,
+				0960B9F229115E0200B74480 /* NameTableViewCell.swift in Sources */,
 				0960B9D02910835E00B74480 /* MainViewController.swift in Sources */,
+				0960B9F02911463000B74480 /* UIViewConstraintExt.swift in Sources */,
 				0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */,
 				0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */,
 			);
