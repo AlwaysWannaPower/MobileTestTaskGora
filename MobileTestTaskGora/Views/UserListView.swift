@@ -15,7 +15,6 @@ class UserListView: UIView {
         view.backgroundColor = .green
         return view
     }()
-
     
     private func setupLayout() {
         self.addSubview(tempView)
@@ -36,7 +35,7 @@ class UserListView: UIView {
         setupLayout()
     }
     
-    init(viewFrame : CGRect) {
+    init(viewFrame: CGRect) {
         super.init(frame: viewFrame)
         setupViews()
     }

@@ -20,6 +20,14 @@
 		F6C975382911323F0049FF39 /* RandomIntProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975372911323F0049FF39 /* RandomIntProvider.swift */; };
 		F6C975402911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9753F2911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift */; };
 		F6C975472911A8030049FF39 /* MockObjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975462911A8030049FF39 /* MockObjectsTests.swift */; };
+		F6C9754A2911AFED0049FF39 /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975492911AFED0049FF39 /* AppAlert.swift */; };
+		F6C9754C2911B00D0049FF39 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9754B2911B00D0049FF39 /* AppConstants.swift */; };
+		F6C9754F2911B0620049FF39 /* CoordinatorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9754E2911B0620049FF39 /* CoordinatorTypes.swift */; };
+		F6C975512911B1FA0049FF39 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975502911B1FA0049FF39 /* AppCoordinator.swift */; };
+		F6C975532911B2E00049FF39 /* UserInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975522911B2E00049FF39 /* UserInfoCoordinator.swift */; };
+		F6C975552911B3080049FF39 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975542911B3080049FF39 /* ViewControllersFactory.swift */; };
+		F6C975572911B3EB0049FF39 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */; };
+		F6C975592911B6C10049FF39 /* UserDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		F6C9753D2911A5A30049FF39 /* MobileTestTaskGoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileTestTaskGoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C9753F2911A5A30049FF39 /* MobileTestTaskGoraUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTestTaskGoraUtilitiesTests.swift; sourceTree = "<group>"; };
 		F6C975462911A8030049FF39 /* MockObjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjectsTests.swift; sourceTree = "<group>"; };
+		F6C975492911AFED0049FF39 /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
+		F6C9754B2911B00D0049FF39 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F6C9754E2911B0620049FF39 /* CoordinatorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTypes.swift; sourceTree = "<group>"; };
+		F6C975502911B1FA0049FF39 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F6C975522911B2E00049FF39 /* UserInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCoordinator.swift; sourceTree = "<group>"; };
+		F6C975542911B3080049FF39 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +106,7 @@
 		0960B9CA2910835E00B74480 /* MobileTestTaskGora */ = {
 			isa = PBXGroup;
 			children = (
+				F6C975482911AFDC0049FF39 /* Common */,
 				F6C97534291131B60049FF39 /* Utilities */,
 				F6C9752B291127A60049FF39 /* Model */,
 				F6C9752A291127970049FF39 /* Views */,
@@ -106,7 +123,9 @@
 		F6C975292911278F0049FF39 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6C9754D2911B0430049FF39 /* Coordinator */,
 				0960B9CF2910835E00B74480 /* UserListViewController.swift */,
+				F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +164,27 @@
 				F6C975462911A8030049FF39 /* MockObjectsTests.swift */,
 			);
 			path = MobileTestTaskGoraTests;
+			sourceTree = "<group>";
+		};
+		F6C975482911AFDC0049FF39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F6C975492911AFED0049FF39 /* AppAlert.swift */,
+				F6C9754B2911B00D0049FF39 /* AppConstants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F6C9754D2911B0430049FF39 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F6C9754E2911B0620049FF39 /* CoordinatorTypes.swift */,
+				F6C975502911B1FA0049FF39 /* AppCoordinator.swift */,
+				F6C975522911B2E00049FF39 /* UserInfoCoordinator.swift */,
+				F6C975542911B3080049FF39 /* ViewControllersFactory.swift */,
+				F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,13 +310,21 @@
 			files = (
 				F6C97536291131D10049FF39 /* RandomStringProvider.swift in Sources */,
 				0960B9D02910835E00B74480 /* UserListViewController.swift in Sources */,
+				F6C975512911B1FA0049FF39 /* AppCoordinator.swift in Sources */,
 				0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */,
+				F6C9754C2911B00D0049FF39 /* AppConstants.swift in Sources */,
 				0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */,
 				F6C9752F29112EDC0049FF39 /* UserInfo.swift in Sources */,
 				F6C97533291130890049FF39 /* UserListMockProvider.swift in Sources */,
 				F6C975382911323F0049FF39 /* RandomIntProvider.swift in Sources */,
 				F6C9752D2911283D0049FF39 /* UserListView.swift in Sources */,
+				F6C9754A2911AFED0049FF39 /* AppAlert.swift in Sources */,
+				F6C975552911B3080049FF39 /* ViewControllersFactory.swift in Sources */,
+				F6C975532911B2E00049FF39 /* UserInfoCoordinator.swift in Sources */,
+				F6C9754F2911B0620049FF39 /* CoordinatorTypes.swift in Sources */,
+				F6C975572911B3EB0049FF39 /* UserDetailsViewController.swift in Sources */,
 				F6C97531291130380049FF39 /* UserListProviderInterface.swift in Sources */,
+				F6C975592911B6C10049FF39 /* UserDetailsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
