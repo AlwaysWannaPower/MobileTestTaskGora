@@ -9,46 +9,29 @@ import UIKit
 
 class UserListView: UIView {
     public var viewClickHandler : UiViewClickHandler?
-
-    @objc
-    private func tempViewTapHandler() {
-        viewClickHandler?()
-    }
     
-    private lazy var tempView: UIView = {
-        let view = UIView()
+    private let modelData = UserListMockProvider().getUserList()
+    
+    private let tableView : UITableView = {
+        let view = UITableView(frame: .zero, style: .plain)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
-        
-        let tapGesture = UITapGestureRecognizer(
-            target: self,
-            action: #selector(tempViewTapHandler)
-        )
-        
-        tapGesture.numberOfTapsRequired = 1
-        view.addGestureRecognizer(tapGesture)
-        view.isUserInteractionEnabled = true
-        
         return view
     }()
-    
-    private func setupLayout() {
-        self.addSubview(tempView)
-        
-        let safeArea = self.safeAreaLayoutGuide
-        
-        let constraints = [
-            tempView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            tempView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            tempView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
-            tempView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
-        ]
-        
-        NSLayoutConstraint.activate(constraints)
+
+    private func setupTableView()
+    {
+        tableView.register(
+            UserItemTableCell.self,
+            forCellReuseIdentifier: String(describing: UserItemTableCell.self)
+        )
+        tableView.dataSource = self
+        tableView.delegate = self
     }
+
     
     private func setupViews() {
-        setupLayout()
+        setupTableView()
+        LayoutAssembler.fillAreaWithView(area: self, filler: tableView)
     }
     
     init(viewFrame: CGRect) {
@@ -60,3 +43,40 @@ class UserListView: UIView {
        fatalError("init(coder:) has not been implemented for UserListView")
     }
 }
+
+extension UserListView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(describing: UserItemTableCell.self)
+        ) as! UserItemTableCell
+
+        let dataItem = modelData[indexPath.section]
+        cell.userIdentity = "\(dataItem.firstName) \(dataItem.secondName)"
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return modelData.count
+    }
+}
+
+extension UserListView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow,
+             indexPathForSelectedRow == indexPath {
+             tableView.deselectRow(at: indexPath, animated: false)
+             return nil
+        }
+        return indexPath
+    }
+}
+
