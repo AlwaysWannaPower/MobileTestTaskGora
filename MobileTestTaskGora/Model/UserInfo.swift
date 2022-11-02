@@ -12,13 +12,9 @@ struct UserInfo {
     let secondName: String
 }
 
-struct NameModel {
-    var name: String
-}
-
 // MARK: - Sourse data
 extension UserListViewController {
-
+    
     func fetchData() -> [UserInfo] {
         let name1 = UserInfo(firstName: "Leanne", secondName: "Graham")
         let name2 = UserInfo(firstName: "Ervin", secondName: "Howell")
@@ -30,7 +26,7 @@ extension UserListViewController {
         let name8 = UserInfo(firstName: "Glenna", secondName: "Reichert")
         let name9 = UserInfo(firstName: "Clementina", secondName: "DuBuque")
         let name10 = UserInfo(firstName: "Mr. Denis", secondName: "Nikulin")
-
+        
         return [name1, name2, name3, name4, name5, name6, name7, name8, name9, name10]
     }
 }

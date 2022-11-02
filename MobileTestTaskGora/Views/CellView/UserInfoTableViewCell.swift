@@ -8,63 +8,48 @@
 import UIKit
 
 class UserInfoTableViewCell: UITableViewCell {
-
+    
     // MARK: - Instance Properties
-
-    var firstNameLabel = UILabel()
-    var secondNameLabel = UILabel()
-    var nameLabel = UILabel()
-
+    
+    private var firstName: String = ""
+    private var secondName: String = ""
+    var userNameLabel = UILabel()
+    
     // MARK: - Instance Methods
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        addSubview(firstNameLabel)
-        addSubview(secondNameLabel)
-
-        configurefirstNameLabel()
-        configuresecondNameLabel()
-
+        
+        addSubview(userNameLabel)
         setConstraints()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func set(user: UserInfo) {
-        firstNameLabel.text = user.firstName
-        secondNameLabel.text = user.secondName
+        firstName = user.firstName
+        secondName = user.secondName
+        userNameLabel.text = firstName + " " + secondName
     }
-
+    
     // MARK: - Private Methods
-
-    private func configurefirstNameLabel() {
-        firstNameLabel.numberOfLines = 0
-        firstNameLabel.adjustsFontSizeToFitWidth = true
-
+    
+    private func configureUserNameLabel() {
+        userNameLabel.numberOfLines = 0
+        userNameLabel.adjustsFontSizeToFitWidth = true
     }
-    private func configuresecondNameLabel() {
-        secondNameLabel.numberOfLines = 0
-        secondNameLabel.adjustsFontSizeToFitWidth = true
-
-    }
-     private func setConstraints() {
-         firstNameLabel.translatesAutoresizingMaskIntoConstraints = false
-         secondNameLabel.translatesAutoresizingMaskIntoConstraints = false
-
+    
+    private func setConstraints() {
+        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
-            firstNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            firstNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            firstNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
-            firstNameLabel.heightAnchor.constraint(equalToConstant: 30),
-
-            secondNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            secondNameLabel.leadingAnchor.constraint(equalTo: firstNameLabel.trailingAnchor, constant: 20),
-            secondNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
-            secondNameLabel.heightAnchor.constraint(equalToConstant: 30)
-
+            userNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
+            userNameLabel.heightAnchor.constraint(equalToConstant: 30)
+            
         ])
     }
 }
