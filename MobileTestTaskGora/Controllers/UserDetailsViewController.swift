@@ -12,11 +12,14 @@ class UserDetailsViewController: UIViewController, Coordinating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
     
-//    override func loadView() {
-//        let userListView = UserListView(viewFrame: .zero)
-//        self.view = userListView
-//    }
+    override func loadView() {
+        let userListView = UserDetailsView(viewFrame: .zero)
+        userListView.viewClickHandler = { [weak self] in
+            self?.coordinator?.processEvent(with: .userDetailsViewToUserInfoViewEvent)
+        }
+        
+        self.view = userListView
+    }
 }

@@ -28,6 +28,8 @@
 		F6C975552911B3080049FF39 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975542911B3080049FF39 /* ViewControllersFactory.swift */; };
 		F6C975572911B3EB0049FF39 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */; };
 		F6C975592911B6C10049FF39 /* UserDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */; };
+		F6EDB8722912AD2400202FEE /* AppTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDB8712912AD2400202FEE /* AppTypes.swift */; };
+		F6EDB8742912AEE000202FEE /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDB8732912AEE000202FEE /* UserDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		F6C975542911B3080049FF39 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		F6C975562911B3EB0049FF39 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		F6C975582911B6C10049FF39 /* UserDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsCoordinator.swift; sourceTree = "<group>"; };
+		F6EDB8712912AD2400202FEE /* AppTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTypes.swift; sourceTree = "<group>"; };
+		F6EDB8732912AEE000202FEE /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C9752C2911283D0049FF39 /* UserListView.swift */,
+				F6EDB8732912AEE000202FEE /* UserDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				F6C975492911AFED0049FF39 /* AppAlert.swift */,
 				F6C9754B2911B00D0049FF39 /* AppConstants.swift */,
+				F6EDB8712912AD2400202FEE /* AppTypes.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 				F6C975512911B1FA0049FF39 /* AppCoordinator.swift in Sources */,
 				0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */,
 				F6C9754C2911B00D0049FF39 /* AppConstants.swift in Sources */,
+				F6EDB8722912AD2400202FEE /* AppTypes.swift in Sources */,
 				0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */,
+				F6EDB8742912AEE000202FEE /* UserDetailsView.swift in Sources */,
 				F6C9752F29112EDC0049FF39 /* UserInfo.swift in Sources */,
 				F6C97533291130890049FF39 /* UserListMockProvider.swift in Sources */,
 				F6C975382911323F0049FF39 /* RandomIntProvider.swift in Sources */,

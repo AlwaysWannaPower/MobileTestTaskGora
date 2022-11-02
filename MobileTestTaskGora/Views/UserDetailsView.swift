@@ -1,13 +1,13 @@
 //
-//  UserListView.swift
+//  UserDetailsView.swift
 //  MobileTestTaskGora
 //
-//  Created by Дмитрий Никишов on 01.11.2022.
+//  Created by Дмитрий Никишов on 02.11.2022.
 //
 
 import UIKit
 
-class UserListView: UIView {
+class UserDetailsView: UIView {
     public var viewClickHandler : UiViewClickHandler?
 
     @objc
@@ -18,7 +18,7 @@ class UserListView: UIView {
     private lazy var tempView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
+        view.backgroundColor = .red
         
         let tapGesture = UITapGestureRecognizer(
             target: self,
