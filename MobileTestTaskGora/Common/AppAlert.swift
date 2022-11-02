@@ -15,12 +15,11 @@ class AppAlert {
         let alert = UIAlertController(title: AppCommonStrings.appName,
                                       message: notificationText,
                                       preferredStyle: .alert)
-    
+
         let ok = UIAlertAction(title: "OK", style: .default)
-    
+
         alert.addAction(ok)
-    
+
         controller?.present(alert, animated: true)
     }
 }
-

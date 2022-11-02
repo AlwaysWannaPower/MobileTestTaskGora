@@ -9,16 +9,16 @@ import Foundation
 
 class UserListMockProvider: UserListProviderInterface {
     private let mockData: [UserInfo]
-    
-    private static let MOCK_DATA_MAX_LENGTH = 20
-    private static let MOCK_DATA_ITEM_MAX_LENGTH = 10
-    
+    // SwiftLint выдавал ошибку на '_' / отрефакторил
+    private static let mockDataMaxLength = 20
+    private static let mockDataItemLength = 10
+
     init() {
         let mockDataLength = RandomIntProvider
-            .getRandomInt(min: 1, max: UserListMockProvider.MOCK_DATA_MAX_LENGTH)
+            .getRandomInt(min: 1, max: UserListMockProvider.mockDataMaxLength)
 
         let mockDataItemLength = RandomIntProvider
-            .getRandomInt(min: 1, max: UserListMockProvider.MOCK_DATA_ITEM_MAX_LENGTH)
+            .getRandomInt(min: 1, max: UserListMockProvider.mockDataItemLength)
 
         mockData = (0...mockDataLength).map { _ in
             UserInfo(
@@ -27,7 +27,7 @@ class UserListMockProvider: UserListProviderInterface {
             )
         }
     }
-    
+
     func getUserList() -> [UserInfo] {
         return mockData
     }

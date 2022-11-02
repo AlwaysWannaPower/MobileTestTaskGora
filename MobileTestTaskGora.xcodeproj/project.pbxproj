@@ -12,6 +12,8 @@
 		0960B9D02910835E00B74480 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9CF2910835E00B74480 /* UserListViewController.swift */; };
 		0960B9D52910836000B74480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D42910836000B74480 /* Assets.xcassets */; };
 		0960B9D82910836000B74480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0960B9D62910836000B74480 /* LaunchScreen.storyboard */; };
+		0960B9FF2911DC0E00B74480 /* UIViewConstraintExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9F92911DC0E00B74480 /* UIViewConstraintExt.swift */; };
+		0960BA032911DC0E00B74480 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B9FD2911DC0E00B74480 /* UserInfoTableViewCell.swift */; };
 		F6C9752D2911283D0049FF39 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9752C2911283D0049FF39 /* UserListView.swift */; };
 		F6C9752F29112EDC0049FF39 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9752E29112EDC0049FF39 /* UserInfo.swift */; };
 		F6C97531291130380049FF39 /* UserListProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C97530291130380049FF39 /* UserListProviderInterface.swift */; };
@@ -48,6 +50,8 @@
 		0960B9D42910836000B74480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0960B9D72910836000B74480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0960B9D92910836000B74480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0960B9F92911DC0E00B74480 /* UIViewConstraintExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewConstraintExt.swift; sourceTree = "<group>"; };
+		0960B9FD2911DC0E00B74480 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		F6C9752C2911283D0049FF39 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		F6C9752E29112EDC0049FF39 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F6C97530291130380049FF39 /* UserListProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListProviderInterface.swift; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 			path = MobileTestTaskGora;
 			sourceTree = "<group>";
 		};
+		0960BA052911F9AD00B74480 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				0960B9FD2911DC0E00B74480 /* UserInfoTableViewCell.swift */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
 		F6C975292911278F0049FF39 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 		F6C9752A291127970049FF39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0960BA052911F9AD00B74480 /* CellView */,
 				F6C9752C2911283D0049FF39 /* UserListView.swift */,
 			);
 			path = Views;
@@ -151,6 +164,7 @@
 		F6C97534291131B60049FF39 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0960B9F92911DC0E00B74480 /* UIViewConstraintExt.swift */,
 				F6C97535291131D10049FF39 /* RandomStringProvider.swift */,
 				F6C975372911323F0049FF39 /* RandomIntProvider.swift */,
 			);
@@ -311,6 +325,7 @@
 				F6C97536291131D10049FF39 /* RandomStringProvider.swift in Sources */,
 				0960B9D02910835E00B74480 /* UserListViewController.swift in Sources */,
 				F6C975512911B1FA0049FF39 /* AppCoordinator.swift in Sources */,
+				0960B9FF2911DC0E00B74480 /* UIViewConstraintExt.swift in Sources */,
 				0960B9CC2910835E00B74480 /* AppDelegate.swift in Sources */,
 				F6C9754C2911B00D0049FF39 /* AppConstants.swift in Sources */,
 				0960B9CE2910835E00B74480 /* SceneDelegate.swift in Sources */,
@@ -322,6 +337,7 @@
 				F6C975552911B3080049FF39 /* ViewControllersFactory.swift in Sources */,
 				F6C975532911B2E00049FF39 /* UserInfoCoordinator.swift in Sources */,
 				F6C9754F2911B0620049FF39 /* CoordinatorTypes.swift in Sources */,
+				0960BA032911DC0E00B74480 /* UserInfoTableViewCell.swift in Sources */,
 				F6C975572911B3EB0049FF39 /* UserDetailsViewController.swift in Sources */,
 				F6C97531291130380049FF39 /* UserListProviderInterface.swift in Sources */,
 				F6C975592911B6C10049FF39 /* UserDetailsCoordinator.swift in Sources */,

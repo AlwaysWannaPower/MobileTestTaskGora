@@ -14,7 +14,7 @@ enum CoordinatorEvent {
 
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController? { get set }
-    
+
     func processEvent(with type: CoordinatorEvent)
     func start()
     func showUnexpectedCoordinatorEventAlert()

@@ -9,12 +9,12 @@ import UIKit
 
 class UserDetailsViewController: UIViewController, Coordinating {
     var coordinator: Coordinator?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .blue
     }
-    
+
 //    override func loadView() {
 //        let userListView = UserListView(viewFrame: .zero)
 //        self.view = userListView

@@ -23,7 +23,7 @@ class ViewControllerFactoryImpl: ViewControllerFactory {
         vc.coordinator = coordinator
         return vc
     }
-    
+
     private func createViewModelBasedOnType(
         with type: CoordinatingViewModelTypes
     ) -> UIViewController & Coordinating {
@@ -35,4 +35,3 @@ class ViewControllerFactoryImpl: ViewControllerFactory {
         }
     }
 }
-

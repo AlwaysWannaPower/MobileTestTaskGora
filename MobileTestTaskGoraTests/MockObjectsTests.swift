@@ -11,7 +11,7 @@ import XCTest
 final class MockObjectsTests: XCTestCase {
 
     func testMockDataProvider() throws {
-        let mockData = UserListMockProvider().getUserList()        
+        let mockData = UserListMockProvider().getUserList()
         XCTAssert(!mockData.isEmpty)
     }
 

@@ -19,7 +19,7 @@ final class MobileTestTaskGoraUtilitiesTests: XCTestCase {
     func testRandomStringProvider() throws {
         let randomStringMaxLength = 5
         let randomString = RandomStringProvider.getString(length: randomStringMaxLength)
-        
+
         XCTAssert(randomString.count <= randomStringMaxLength)
     }
 }
