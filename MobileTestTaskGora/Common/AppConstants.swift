@@ -10,3 +10,4 @@ import Foundation
 enum AppCommonStrings {
     static let appName = "Gora Test Task"
 }
+
