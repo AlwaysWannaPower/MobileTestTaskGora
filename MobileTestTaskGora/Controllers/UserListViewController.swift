@@ -17,7 +17,7 @@ class UserListViewController: UIViewController, Coordinating {
     override func loadView() {
         let userListView = UserListView(viewFrame: .zero)
         
-        userListView.viewClickHandler = { [weak self] in
+        userListView.viewClickHandler = { [weak self] _ in
             self?.coordinator?.processEvent(with: .userInfoViewToUserDetailsViewEvent)
         }
 

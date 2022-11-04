@@ -8,7 +8,9 @@
 import UIKit
 
 class UserItemTableCell: UITableViewCell {
-    var userIdentity : String {
+    var userNameLabelTapHandler: UiViewClickHandlerWithParamater<String>?
+    
+    var userIdentity: String {
         get {
             return userNameLabel.text ?? ""
         }
@@ -18,10 +20,23 @@ class UserItemTableCell: UITableViewCell {
         }
     }
     
-    private let userNameLabel : UILabel = {
+    @objc
+    private func userNameLabelTapHandlerInternal() {
+        userNameLabelTapHandler?(userIdentity)
+    }
+    
+    private lazy var userNameLabel : UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.font = UIFont.systemFont(ofSize: 14)
+        view.isUserInteractionEnabled = true
+
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(userNameLabelTapHandlerInternal))
+        tap.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tap)
+        
         return view
     }()
 
