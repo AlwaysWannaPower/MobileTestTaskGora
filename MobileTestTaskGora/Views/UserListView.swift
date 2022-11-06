@@ -8,7 +8,7 @@
 import UIKit
 
 class UserListView: UIView {
-    public var viewClickHandler : UiViewClickHandler?
+    var viewClickHandler : UiViewClickHandlerWithParamater<String>?
     
     private let modelData = UserListMockProvider().getUserList()
     
@@ -52,7 +52,9 @@ extension UserListView: UITableViewDataSource {
 
         let dataItem = modelData[indexPath.section]
         cell.userIdentity = "\(dataItem.firstName) \(dataItem.secondName)"
-
+        cell.userNameLabelTapHandler = { [weak self] userName in
+            self?.viewClickHandler?(userName)
+        }
         return cell
     }
     
